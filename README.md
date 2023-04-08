@@ -29,5 +29,20 @@
 5. total_price()
 
 # Demo
+1. Add item
+
+![image](https://user-images.githubusercontent.com/128889408/230732773-373cdccf-8dce-415f-a676-b7f45fe0275f.png)
+
+2. Delete item
+
+![image](https://user-images.githubusercontent.com/128889408/230732979-ee5aa8c1-6849-45f6-b92a-748f1fcab41e.png)
+
+3. Reset Transaction
+
+![image](https://user-images.githubusercontent.com/128889408/230732948-1231fc7d-d9d8-406a-9c93-17e91ac9872e.png)
+
+4. Check Order and Total Price
+
+![image](https://user-images.githubusercontent.com/128889408/230733128-f7b408f8-d2fb-4f7d-9c7d-d2a16eb68274.png)
 
 # Conclusion
