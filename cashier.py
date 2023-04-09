@@ -19,8 +19,8 @@ list_menu_edit = [
     ['[4]','Kembali ke menu utama']
 ]
         
-nama_pembeli = input('Nama Pembeli\t: ')
-trnsct_123 = Transaction(nama_pembeli)
+customer_name = input('Nama Pembeli\t: ')
+trnsct_123 = Transaction(customer_name)
 
 print('')
 print(tabulate(list_menu, headers = "firstrow"))
@@ -33,27 +33,29 @@ while True:
   except ValueError:
     print(f'Menu yang harus dimasukkan adalah angka 1-{len(list_menu)-1}!!!')
   else:
-      if menu not in range(1,len(list_menu)):
+      if menu not in range(1, len(list_menu)):
         print('Menu yang anda masukkan tidak terdaftar!!!')
-      elif menu in range(1,len(list_menu)-1):
+      elif menu in range(1, len(list_menu)-1):
         if menu == 1:
           tambah_item = 'y'
           while tambah_item == 'y':
-            item_name = input('Nama Item\t: ')
+            name = input('Nama Item\t: ')
             quantity = input('Jumlah Item \t: ')
             price = input('Harga/Item \t: ')
 
             try:
               quantity = int(quantity)
             except ValueError:
-              print('Jumlah item yang anda masukkan salah!!! nilai yang diterima adalah angka')
+              print('Jumlah item yang anda masukkan salah!!! nilai yang \
+              diterima adalah angka')
             else:
               try:
                 price = int(price)
               except ValueError:
-                print('Harga item yang anda masukkan salah!!! nilai yang diterima adalah angka')
+                print('Harga item yang anda masukkan salah!!! nilai yang \
+                diterima adalah angka')
               else:
-                trnsct_123.add_item(item_name,quantity,price)
+                trnsct_123.add_item(name, quantity, price)
                 print('')
               
                 tambah_item = input('Tambah item? [y/n]\t: ').lower()
@@ -66,7 +68,6 @@ while True:
                   tambah_item = input('Tambah item? [y/n]\t: ').lower()
                   print('')
 
-
           print(trnsct_123)
         
         elif menu == 2:
@@ -74,38 +75,40 @@ while True:
             print(tabulate(list_menu_edit, headers = "firstrow"))
             print('')
             menu_edit = input('Pilih menu\t: ')
-            print('')
 
             try:
               menu_edit = int(menu_edit)
             except ValueError:
-              print(f'Menu yang harus dimasukkan adalah angka 1-{len(list_menu_edit)-1}!!!')
+              print(f'Menu yang harus dimasukkan adalah angka \
+              1-{len(list_menu_edit)-1}!!!')
             else:
-              if menu_edit not in range(1,len(list_menu_edit)):
+              if menu_edit not in range(1, len(list_menu_edit)):
                 print('Menu yang anda masukkan tidak terdaftar!!!')
-              elif menu_edit in range(1,len(list_menu_edit)-1):
+              elif menu_edit in range(1, len(list_menu_edit)-1):
                 print('')
-                item_name = input('Nama item\t: ')
+                name = input('Nama item\t: ')
                 
                 if menu_edit == 1:
-                  new_item_name = input('Nama item baru\t: ')
-                  trnsct_123.update_item_name(item_name, new_item_name)
+                  new_name = input('Nama item baru\t: ')
+                  trnsct_123.update_item_name(name, new_name)
                 elif menu_edit == 2:
                   new_quantity = input('Jumlah item baru\t: ')
                   try:
                     new_quantity = int(new_quantity)
                   except ValueError:
-                    print(f'Jumlah item yang anda masukkan salah!!! nilai yang diterima adalah angka')
+                    print(f'Jumlah item yang anda masukkan salah!!! nilai yang \
+                    diterima adalah angka')
                   else:
-                    trnsct_123.update_quantity(item_name, new_quantity)
+                    trnsct_123.update_item_quantity(name, new_quantity)
                 elif menu_edit == 3:
                   new_price = input('Harga item baru\t: ')
                   try:
                     new_price = int(new_price)
                   except ValueError:
-                    print(f'Harga item yang anda masukkan salah!!! nilai yang diterima adalah angka')
+                    print(f'Harga item yang anda masukkan salah!!! nilai yang \
+                    diterima adalah angka')
                   else:
-                    trnsct_123.update_price(item_name, new_price)
+                    trnsct_123.update_item_price(name, new_price)
                 
                 print('')
                 print(trnsct_123)
