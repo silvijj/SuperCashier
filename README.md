@@ -30,6 +30,9 @@ All feature are compile in several menu, so customer can choose what feature the
 
 # Flowchart
 
+![Flowchart](https://user-images.githubusercontent.com/128889408/230767415-1deb844b-ccd7-4770-bd95-ac5c1bddb6b2.png)
+
+
 # Function
 
 1. `add_item(item_name, item_quantity, item_price)`
@@ -39,6 +42,7 @@ All feature are compile in several menu, so customer can choose what feature the
     | item_name | name of item | string |
     | item_quantity | quantity of item | number |
     | item_price | price of one item | number |
+    
 2. update_item
     1. `update_item_name(item_name, new_item_name)`
     
@@ -66,6 +70,8 @@ All feature are compile in several menu, so customer can choose what feature the
     2. `reset_transaction()`
 4. `check_order()`
 5. `total_price()`
+
+If user input non numeric into item_quantity or item_price, system will be send an error message
 
 # How to Use
 
@@ -95,7 +101,7 @@ All feature are compile in several menu, so customer can choose what feature the
 
 5. Check Order and Total Price
 
-    ![image](https://user-images.githubusercontent.com/128889408/230733128-f7b408f8-d2fb-4f7d-9c7d-d2a16eb68274.png)
+    ![image](https://user-images.githubusercontent.com/128889408/230767622-c8b575d7-f385-49bf-a919-b804167b4c9c.png)
 
 # Conclusion
 1. In current program all purchased items are store in a dictionary
