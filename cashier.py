@@ -1,5 +1,3 @@
-"""isi docstring ini"""
-
 from tabulate import tabulate
 from modul import Transaction
 
@@ -21,12 +19,12 @@ list_menu_edit = [
     ['[4]','Kembali ke menu utama']
 ]
         
-nama_pembeli = input('Nama Pembeli\t:')
+nama_pembeli = input('Nama Pembeli\t: ')
 trnsct_123 = Transaction(nama_pembeli)
 
 print('')
 print(tabulate(list_menu, headers = "firstrow"))
-menu = input('\nPilih menu:')
+menu = input('\nPilih menu\t: ')
 print('')
 
 while True:
@@ -35,7 +33,6 @@ while True:
   except ValueError:
     print(f'Menu yang harus dimasukkan adalah angka 1-{len(list_menu)-1}!!!')
   else:
-    # while menu in range(1,len(list_menu)):
       if menu not in range(1,len(list_menu)):
         print('Menu yang anda masukkan tidak terdaftar!!!')
       elif menu in range(1,len(list_menu)-1):
@@ -59,14 +56,14 @@ while True:
                 trnsct_123.add_item(item_name,quantity,price)
                 print('')
               
-                tambah_item = input('Tambah item? [y/n]:').lower()
+                tambah_item = input('Tambah item? [y/n]\t: ').lower()
                 print('')
 
                 if tambah_item == 'n':
                   break
                 elif tambah_item not in ['y','n']:
                   print('Isi dengan y/n')
-                  tambah_item = input('Tambah item? [y/n]:').lower()
+                  tambah_item = input('Tambah item? [y/n]\t: ').lower()
                   print('')
 
 
@@ -75,7 +72,9 @@ while True:
         elif menu == 2:
           while menu == 2:
             print(tabulate(list_menu_edit, headers = "firstrow"))
-            menu_edit = input('Pilih menu:')
+            print('')
+            menu_edit = input('Pilih menu\t: ')
+            print('')
 
             try:
               menu_edit = int(menu_edit)
@@ -85,13 +84,14 @@ while True:
               if menu_edit not in range(1,len(list_menu_edit)):
                 print('Menu yang anda masukkan tidak terdaftar!!!')
               elif menu_edit in range(1,len(list_menu_edit)-1):
-                item_name = input('Nama item: \t')
+                print('')
+                item_name = input('Nama item\t: ')
                 
                 if menu_edit == 1:
-                  new_item_name = input('Nama item baru: \t')
+                  new_item_name = input('Nama item baru\t: ')
                   trnsct_123.update_item_name(item_name, new_item_name)
                 elif menu_edit == 2:
-                  new_quantity = input('Jumlah item baru: \t')
+                  new_quantity = input('Jumlah item baru\t: ')
                   try:
                     new_quantity = int(new_quantity)
                   except ValueError:
@@ -99,7 +99,7 @@ while True:
                   else:
                     trnsct_123.update_quantity(item_name, new_quantity)
                 elif menu_edit == 3:
-                  new_price = input('Harga item baru: \t')
+                  new_price = input('Harga item baru\t: ')
                   try:
                     new_price = int(new_price)
                   except ValueError:
@@ -107,13 +107,15 @@ while True:
                   else:
                     trnsct_123.update_price(item_name, new_price)
                 
+                print('')
                 print(trnsct_123)
+                print('')
                           
             if menu_edit == 4:
               break
           
         elif menu == 3:
-          delete_item = input('Item yang akan dihapus:')
+          delete_item = input('Item yang akan dihapus\t: ')
           trnsct_123.delete_item(delete_item)
           print(trnsct_123)
 
@@ -132,7 +134,7 @@ while True:
         
         print('')
         print(tabulate(list_menu, headers = "firstrow"))
-        menu = input('\nPilih menu:')
+        menu = input('\nPilih menu\t: ')
         print('')
 
   if menu == 6:
