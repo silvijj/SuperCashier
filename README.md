@@ -1,7 +1,5 @@
 # About Super Cashier
-Super Cashier is a cashier program that build with Python Language. This program have some feature, that will be explain below.
-
-# Objektif
+Super Cashier is a self-service supermarket cashier program that build with Python Language. This program have some feature, that will be explain below.
 
 # Feature
 
@@ -27,6 +25,8 @@ Super Cashier is a cashier program that build with Python Language. This program
     | more than Rp 200.000 | 5% |
     | more than Rp 300.000 | 8% |
     | more than Rp 500.000 | 10% |
+
+All feature are compile in several menu, so customer can choose what feature they want use.
 
 # Flowchart
 
@@ -67,6 +67,15 @@ Super Cashier is a cashier program that build with Python Language. This program
 4. `check_order()`
 5. `total_price()`
 
+# How to Use
+
+1.	Download all Python file/module into one local directory
+2.	Open terminal and go to local directory where file has been download exists
+3.	Running Cashier.py
+    ``` 
+    python Cashier.py 
+    ```
+
 # Demo
 1. Add item 
 
@@ -89,3 +98,5 @@ Super Cashier is a cashier program that build with Python Language. This program
     ![image](https://user-images.githubusercontent.com/128889408/230733128-f7b408f8-d2fb-4f7d-9c7d-d2a16eb68274.png)
 
 # Conclusion
+1. In current program all purchased items are store in a dictionary
+2. For next development all item that has been purchased by customer can store into database
