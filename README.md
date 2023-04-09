@@ -7,11 +7,11 @@ Super Cashier is a self-service supermarket cashier program that build with Pyth
     : you can add item, quantity and price per item
 2. Update item
     1. Update item name
-        : you can update the item name that has been input before
+        : you can update the item name already entered
     2. Update item quantity
-        : you can update the item quantiity that has been input before
+        : you can update the item quantiity already entered
     3. Update item price
-        : you can update the item price that has been input before
+        : you can update the item price already entered
 3. Delete item
     1. Delete one item
     2. Delete all item / reset transaction
@@ -35,38 +35,38 @@ All feature are compile in several menu, so customer can choose what feature the
 
 # Function
 
-1. `add_item(item_name, item_quantity, item_price)`
+1. `add_item(name, quantity, price)`
 
     | Parameter name | Description | Data Type |
     | ----------- | ----------- | ----------- |
-    | item_name | name of item | string |
-    | item_quantity | quantity of item | number |
-    | item_price | price of one item | number |
+    | name | name of item | string |
+    | quantity | quantity of item | number |
+    | price | price of one item | number |
     
 2. update_item
-    1. `update_item_name(item_name, new_item_name)`
+    1. `update_item_name(name, new_name)`
     
         | Parameter name | Description | Data Type |
         | ----------- | ----------- | ----------- |
-        | item_name | name of item | string |
-        | new_item_name | new name of item | string |
+        | name | name of item | string |
+        | new_name | new name of item | string |
     
-    2. `update_item_quantity(item_name, new_item_quantity)`
-    
-        | Parameter name | Description | Data Type |
-        | ----------- | ----------- | ----------- |
-        | item_name | name of item | string |
-        | new_item_quantity | new quantity of item | number |
-    
-    3. `update_item_price(item_name, new_item_price)`
+    2. `update_item_quantity(name, new_quantity)`
     
         | Parameter name | Description | Data Type |
         | ----------- | ----------- | ----------- |
-        | item_name | name of item | string |
-        | new_item_price | new price of item | number |
+        | name | name of item | string |
+        | new_quantity | new quantity of item | number |
+    
+    3. `update_item_price(name, new_price)`
+    
+        | Parameter name | Description | Data Type |
+        | ----------- | ----------- | ----------- |
+        | name | name of item | string |
+        | new_price | new price of item | number |
     
 3. delete item
-    1. `delete_item(item_name)`
+    1. `delete_item(name)`
     2. `reset_transaction()`
 4. `check_order()`
 5. `total_price()`
@@ -105,4 +105,4 @@ If user input non numeric into item_quantity or item_price, system will be send 
 
 # Conclusion
 1. In current program all purchased items are store in a dictionary
-2. For next development all item that has been purchased by customer can store into database
+2. For next development all item already entered by customer can store into database
