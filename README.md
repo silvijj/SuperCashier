@@ -30,7 +30,8 @@ All feature are compile in several menu, so customer can choose what feature the
 
 # Flowchart
 
-![Flowchart](https://user-images.githubusercontent.com/128889408/230767415-1deb844b-ccd7-4770-bd95-ac5c1bddb6b2.png)
+![230767415-1deb844b-ccd7-4770-bd95-ac5c1bddb6b2 edit](https://user-images.githubusercontent.com/128889408/232315653-43f90cb1-5384-4136-b8e3-6b9758b5cd15.png)
+
 
 
 # Code Description
