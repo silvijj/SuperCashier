@@ -40,7 +40,7 @@ All feature are compile in several menu, so customer can choose what feature the
 2. module.py
     : are module file and consist of several function to support main file
 
-## main.py
+## cashier.py
 Consist of flow to running the program likes define on flowchart before. At this part there is error handling when input not meet the requierement, likes:
 1. While user enter menu outside from list, system will send an error message
     ```
